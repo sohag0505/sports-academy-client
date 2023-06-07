@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "name": "Football",
+    "description": "Football is a team sport played with a spherical ball between two teams of 11 players. It is the most popular sport in the world.",
+    "instructorName": "John Doe",
+    "price": 100,
+    "duration": "1 hour",
+    "location": "Sports Stadium",
+    "level": "Intermediate",
+    "image": "https://d12eu00glpdtk2.cloudfront.net/public/images/local/ICON-Football.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "Cricket",
+    "description": "Cricket is a bat-and-ball game played between two teams of eleven players. It is widely regarded as the second most popular sport in the world.",
+    "instructorName": "Jane Smith",
+    "price": 80,
+    "duration": "2 hours",
+    "location": "Cricket Ground",
+    "level": "Advanced",
+    "image": "https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/sites/1/2017/09/06120641/060917_MadanLalCricketAcademy_02.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Chess",
+    "description": "Chess is a strategy board game played on a checkered gameboard with 64 squares. It is one of the oldest and most popular board games in the world.",
+    "instructorName": "Robert Johnson",
+    "price": 60,
+    "duration": "1.5 hours",
+    "location": "Chess Club",
+    "level": "Beginner",
+    "image": "https://d12eu00glpdtk2.cloudfront.net/public/images/local/ICON-Football.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "Badminton",
+    "description": "Badminton is a racquet sport played using racquets to hit a shuttlecock across a net. It is a popular recreational and competitive sport and cosly game.",
+    "instructorName": "Emily Wilson",
+    "price": 70,
+    "duration": "1 hour",
+    "location": "Badminton Court",
+    "level": "Intermediate",
+    "image": "https://d12eu00glpdtk2.cloudfront.net/public/images/local/ICON-Football.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "Basketball",
+    "description": "Basketball is a team sport played on a rectangular court. Players try to score by shooting a ball through the opponent's hoop.",
+    "instructorName": "Michael Johnson",
+    "price": 90,
+    "duration": "1.5 hours",
+    "location": "Basketball Arena",
+    "level": "Advanced",
+    "image": "https://d12eu00glpdtk2.cloudfront.net/public/images/local/ICON-Football.jpeg"
+  },
+
+  {
+    "id": 6,
+    "name": "Tennis",
+    "description": "Tennis is a racket sport played between two players or two teams of two players each. It is played on a rectangular court divided by a net.",
+    "instructorName": "David Thompson",
+    "price": 85,
+    "duration": "1.5 hours",
+    "location": "Tennis Club",
+    "level": "Intermediate",
+    "image": "https://d12eu00glpdtk2.cloudfront.net/public/images/local/ICON-Football.jpeg"
+  }
+]
