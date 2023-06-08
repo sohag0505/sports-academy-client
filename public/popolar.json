@@ -41,7 +41,7 @@
     "duration": "1 hour",
     "location": "Badminton Court",
     "level": "Intermediate",
-    "image": "https://d12eu00glpdtk2.cloudfront.net/public/images/local/ICON-Football.jpeg"
+    "image": "https://www.ppba.in/images/CSE_Courts.jpg"
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "duration": "1.5 hours",
     "location": "Basketball Arena",
     "level": "Advanced",
-    "image": "https://d12eu00glpdtk2.cloudfront.net/public/images/local/ICON-Football.jpeg"
+    "image": "https://www.urspringschule.de/assets/images/freizeitangebot/basketball/grid/ximg-grid-freizeitangebot-basketball-07.jpg,qm=1638450231.pagespeed.ic.t_5xjwmr3U.jpg"
   },
 
   {
@@ -64,6 +64,6 @@
     "duration": "1.5 hours",
     "location": "Tennis Club",
     "level": "Intermediate",
-    "image": "https://d12eu00glpdtk2.cloudfront.net/public/images/local/ICON-Football.jpeg"
+    "image": "https://storage.googleapis.com/wzukusers/user-23824092/images/57dbd4692c82dOxS14xN/Tennis-adult-4-player.JPG"
   }
 ]

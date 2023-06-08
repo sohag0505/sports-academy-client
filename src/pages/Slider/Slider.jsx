@@ -29,7 +29,11 @@ const Slider = () => {
             <div>
               <div className="card w-full md:w-96 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
-                  <img src={sport.image} alt="Shoes" className="rounded-xl" />
+                  <img
+                    src={sport.image}
+                    alt="Shoes"
+                    className="rounded-xl w-full object-cover h-[250px]"
+                  />
                 </figure>
                 <div className="card-body items-center text-center">
                   <h2 className="card-title">{sport.name}</h2>

@@ -62,7 +62,7 @@ const InstructorSlider = () => {
         Popular Instructors
       </h2>
       <Slider {...settings}>
-        {instructors.map((instructor) => (
+        {instructors.slice(0, 6).map((instructor) => (
           <div key={instructor.id} className="card p-8">
             <img
               src={instructor.image}
