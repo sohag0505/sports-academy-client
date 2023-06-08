@@ -8,6 +8,7 @@
     "duration": "1 hour",
     "location": "Sports Stadium",
     "level": "Intermediate",
+    "seats": "23 Seats Available",
     "image": "https://d12eu00glpdtk2.cloudfront.net/public/images/local/ICON-Football.jpeg"
   },
   {
@@ -19,6 +20,7 @@
     "duration": "2 hours",
     "location": "Cricket Ground",
     "level": "Advanced",
+    "seats": "26 Seats Available",
     "image": "https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/sites/1/2017/09/06120641/060917_MadanLalCricketAcademy_02.jpg"
   },
   {
@@ -30,6 +32,7 @@
     "duration": "1.5 hours",
     "location": "Chess Club",
     "level": "Beginner",
+    "seats": "33 Seats Available",
     "image": "https://images.unsplash.com/photo-1532959604812-c2909578fae3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGNoZXNzJTIwa29jYWh8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
   },
   {
@@ -41,6 +44,7 @@
     "duration": "1 hour",
     "location": "Badminton Court",
     "level": "Intermediate",
+    "seats": "36 Seats Available",
     "image": "https://www.ppba.in/images/CSE_Courts.jpg"
   },
   {
@@ -52,6 +56,7 @@
     "duration": "1.5 hours",
     "location": "Basketball Arena",
     "level": "Advanced",
+    "seats": "13 Seats Available",
     "image": "https://www.urspringschule.de/assets/images/freizeitangebot/basketball/grid/ximg-grid-freizeitangebot-basketball-07.jpg,qm=1638450231.pagespeed.ic.t_5xjwmr3U.jpg"
   },
 
@@ -64,6 +69,7 @@
     "duration": "1.5 hours",
     "location": "Tennis Club",
     "level": "Intermediate",
+    "seats": "27 Seats Available",
     "image": "https://storage.googleapis.com/wzukusers/user-23824092/images/57dbd4692c82dOxS14xN/Tennis-adult-4-player.JPG"
   }
 ]
