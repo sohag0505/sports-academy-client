@@ -8,19 +8,20 @@ const AddCourse = () => {
 
     const form = event.target;
     const name = form.name.value;
-
+    const instructorName = form.instructorName.value;
     const price = form.price.value;
+    const location = form.location.value;
 
-    const quantity = form.quantity.value;
+    const seats = form.seats.value;
 
     const photo = form.photo.value;
 
     const coursesData = {
       name,
-
+      instructorName,
       price,
-
-      quantity,
+      location,
+      seats,
 
       photo,
       inatructorName: user.displayName,
@@ -60,6 +61,24 @@ const AddCourse = () => {
                 required
               />
             </div>
+            <div className="form-control">
+              <input
+                type="text"
+                name="instructorName"
+                placeholder="instructorName"
+                className="input input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <input
+                type="text"
+                placeholder="Location"
+                name="location"
+                className="input input-bordered"
+                required
+              />
+            </div>
 
             <div className="form-control">
               <input
@@ -74,8 +93,8 @@ const AddCourse = () => {
             <div className="form-control">
               <input
                 type="text"
-                placeholder="Available Quantity"
-                name="quantity"
+                placeholder="Available Seat"
+                name="seats"
                 className="input input-bordered"
                 required
               />
