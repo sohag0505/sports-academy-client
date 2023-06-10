@@ -8,7 +8,7 @@ const Instructors = () => {
     const fetchInstructors = async () => {
       try {
         // Replace this with your actual API call to fetch the instructor data
-        const response = await fetch("instructor.json");
+        const response = await fetch("http://localhost:5000/instructor");
         const data = await response.json();
         setInstructors(data);
       } catch (error) {

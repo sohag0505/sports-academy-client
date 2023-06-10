@@ -8,7 +8,7 @@ const Courses = () => {
     const fetchSportsData = async () => {
       try {
         // Make an API call to fetch sports data
-        const response = await fetch("popolar.json");
+        const response = await fetch("http://localhost:5000/classes");
         const data = await response.json();
 
         // Update the state with the fetched sports data
