@@ -23,7 +23,7 @@ const Slider = () => {
 
   return (
     <div className="slider-container">
-      <div className="slider grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="slider grid grid-cols-1 md:grid-cols-3 gap-20">
         {sportsData.map((sport) => (
           <div key={sport.id} className="card">
             <div>

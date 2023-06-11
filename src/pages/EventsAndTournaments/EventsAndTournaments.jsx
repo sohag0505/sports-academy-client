@@ -38,9 +38,9 @@ const EventsAndTournaments = () => {
       <h2 className="slider-title text-3xl text-center my-10 font-semibold">
         Events and Tournaments
       </h2>
-      <div className="grid grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-3">
         {events.map((event, index) => (
-          <div key={index} className="event-card ml-14">
+          <div key={index} className="event-card ml-8 md:ml-14">
             <div>
               <img
                 className="object-cover w-full h-[200px]"
