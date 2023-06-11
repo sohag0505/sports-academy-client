@@ -1,12 +1,12 @@
 import { useContext, useState } from "react";
 // import { toast } from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 
 const RegistrationPage = () => {
-  //   const navigate = useNavigate();
+    const navigate = useNavigate();
   const [error, setError] = useState("");
-  const { createUser, updateUser } = useContext(AuthContext);
+  const { createUser, updateUserProfile } = useContext(AuthContext);
   const handleSubmit = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -20,23 +20,34 @@ const RegistrationPage = () => {
       return;
     }
     createUser(email, password)
-      .then((result) => {
+    .then(result => {
+
         const loggedUser = result.user;
-        updateUser({ displayName: name, photoURL: photoUrl })
-          .then(() => {
-            console.log(loggedUser);
-            // toast.success("Registation Successfully!");
-            // navigate("/");
-          })
-          .catch((error) => {
-            // An error occurred
-            // ...
-          });
-      })
-      .catch((error) => {
-        console.log(error);
-        setError(error.message);
-      });
+        console.log(loggedUser);
+
+        updateUserProfile(name, photoUrl)
+            .then(() => {
+                const saveUser = { name: name, email: email, role: 'student', img: photoUrl }
+                fetch('http://localhost:5000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(saveUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.insertedId) {
+                            alert('crated')
+                            navigate('/');
+                        }
+                    })
+
+
+
+            })
+            .catch(error => console.log(error))
+    })
   };
   return (
     <div className="hero  bg-base-200">

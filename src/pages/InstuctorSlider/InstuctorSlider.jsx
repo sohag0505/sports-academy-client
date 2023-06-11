@@ -10,7 +10,7 @@ const InstructorSlider = () => {
   useEffect(() => {
     const fetchInstructorsData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/instructor");
+        const response = await fetch("http://localhost:5000/instructors");
         const data = await response.json();
         setInstructors(data);
       } catch (error) {

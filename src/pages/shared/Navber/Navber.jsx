@@ -12,7 +12,7 @@ const Navbar = () => {
       {user && (
         <>
           <li>
-            <Link to="/courses">Courses</Link>
+            <Link to="/classes">Courses</Link>
           </li>
         </>
       )}
@@ -22,7 +22,7 @@ const Navbar = () => {
       {user && (
         <>
           <li>
-            <Link to="/dashboard">Dashboard</Link>
+            <Link to="/dashboard/home">Dashboard</Link>
           </li>
         </>
       )}

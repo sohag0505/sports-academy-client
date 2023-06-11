@@ -8,7 +8,7 @@ const Instructors = () => {
     const fetchInstructors = async () => {
       try {
         // Replace this with your actual API call to fetch the instructor data
-        const response = await fetch("http://localhost:5000/instructor");
+        const response = await fetch("http://localhost:5000/instructors");
         const data = await response.json();
         setInstructors(data);
       } catch (error) {
@@ -18,7 +18,7 @@ const Instructors = () => {
 
     fetchInstructors();
   }, []);
-
+console.log(instructors)
   return (
     <section>
       <h2 className="text-2xl font-bold mb-4">Instructors</h2>

@@ -1,12 +1,13 @@
 import { useContext, useState } from "react";
 // import { toast } from "react-hot-toast";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 
 const LoginPage = () => {
   const { signIn, googleLogin } = useContext(AuthContext);
-  //   const navigate = useNavigate();
+  const navigate = useNavigate();
   const location = useLocation();
+  //   const navigate = useNavigate();
   const [error, setError] = useState("");
 
   const from = location.state?.from?.pathname || "/";
@@ -37,10 +38,28 @@ const LoginPage = () => {
     console.log("i am here");
     googleLogin()
       .then((result) => {
-        console.log(result);
+        const loggedInUser = result.user;
         // toast.success("Login Successfully!");
         // const user = result.user;
         // navigate(from, { replace: true });
+        const saveUser = {
+          name: loggedInUser.displayName,
+          email: loggedInUser.email,
+          role: "student",
+          img: loggedInUser?.photoURL,
+        };
+        fetch("http://localhost:5000/users", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(saveUser),
+        })
+          .then((res) => res.json())
+          .then(() => {
+            alert("logged");
+            navigate(from, { replace: true });
+          });
       })
       .catch((error) => {
         // Handle Errors here.

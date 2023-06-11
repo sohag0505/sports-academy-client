@@ -1,68 +1,49 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
+import ManageAddedCoursesCard from './ManageAddedCoursesCard';
+import SectionTittle from '../shared/SectionTittle';
+
 
 const ManageAddedCourses = () => {
-  const [courses, setCourses] = useState([]);
+    const [classes, setClasses] = useState([])
+    // only accepted are showed here
+    // const currentStatus = 'accepted';
+    useEffect(() => {
+        fetch('http://localhost:5000/classes')
+            .then(res => res.json())
+            .then(data => setClasses(data))
+    }, [])
 
-  useEffect(() => {
-    fetch("http://localhost:5000/classes")
-      .then((res) => res.json())
-      .then((data) => {
-        setCourses(data);
-
-        console.log(data);
-      });
-  }, []);
-  return (
-    <div className="mb-16">
-      <h2 className="font-bold text-center text-3xl mb-14">
-        Manage Added Courses
-      </h2>
-
-      <div className="overflow-x-auto w-full">
-        <table className="table w-full">
+    return (
+        <div className="overflow-x-auto">
+         <SectionTittle heading={'Manage Added Course'} subHeading={'Approve Or Reject Courses'}></SectionTittle>
+        <table className="table">
           {/* head */}
           <thead>
             <tr>
+              <th>
+                <label>
+               #
+                </label>
+              </th>
               <th>Image</th>
-              <th> NAME</th>
-              <th>PRICE</th>
-              <th>INSTRUCTOR NAME</th>
-              <th>AVIAILABLE SEAT</th>
-              <th>STATUS</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Instructor Name</th>
+              <th>Available Seat</th>
+              <th>Status</th>
             </tr>
           </thead>
           <tbody>
-            {courses.map((course) => (
-              <tr key={course._id}>
-                <td>
-                  <div className="flex items-center space-x-3">
-                    <div className="avatar">
-                      <div className="mask mask-squircle w-12 h-12">
-                        <img
-                          src={course.photo}
-                          alt="Avatar Tailwind CSS Component"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td>{course.name}</td>
-                <td>{course.price}</td>
-                <td>{course.instructorName}</td>
-                <td>{course.seats}</td>
-                <td>{course.location}</td>
-                <th>
-                  <button className="btn btn-outline btn-primary">
-                    VIEW DETAILS
-                  </button>
-                </th>
-              </tr>
-            ))}
+    
+           {
+            classes.map(((course,index)=><ManageAddedCoursesCard key={course._id} course={course} index={index}></ManageAddedCoursesCard>))
+           }
           </tbody>
+       
+          
         </table>
       </div>
-    </div>
-  );
+    );
 };
 
 export default ManageAddedCourses;

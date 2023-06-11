@@ -1,16 +1,23 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Courses from "../pages/Courses/Courses";
-import AddCourse from "../pages/Dashboard/AddCourse";
+import AddedCourses from "../pages/Dashboard/AddedCourses";
 import Dashboard from "../pages/Dashboard/Dashboard";
+import DashboardHome from "../pages/Dashboard/DashboardHome";
 import ManageAddedCourses from "../pages/Dashboard/ManageAddedCourses";
-import ManageCourse from "../pages/Dashboard/ManageCourse";
-import ManagerUser from "../pages/Dashboard/ManagerUser";
-import SelectedCourse from "../pages/Dashboard/SelectedCourse";
+import ManageCourses from "../pages/Dashboard/ManageCourses";
+import MangeUsers from "../pages/Dashboard/MangeUsers";
+import MyEnrollClasses from "../pages/Dashboard/MyEnrollClasses";
+import Payment from "../pages/Dashboard/Payment/Payment";
+import PaymentHistory from "../pages/Dashboard/Payment/PaymentHistory";
+import SelectedCourses from "../pages/Dashboard/SelectedCourses";
 import Home from "../pages/Home/Home/Home";
 import Instructors from "../pages/Instructors/Instructors";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import RegistrationPage from "../pages/RegistrationPage/RegistrationPage";
+import AdminRoute from "./AdminRoute";
+import InstructorRoute from "./InstructorRoute";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -22,7 +29,7 @@ export const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "/courses",
+        path: "/classes",
         element: <Courses></Courses>,
       },
       {
@@ -34,7 +41,7 @@ export const router = createBrowserRouter([
         element: <LoginPage></LoginPage>,
       },
       {
-        path: "/registration",
+        path: "/registation",
         element: <RegistrationPage></RegistrationPage>,
       },
     ],
@@ -44,24 +51,76 @@ export const router = createBrowserRouter([
     element: <Dashboard></Dashboard>,
     children: [
       {
-        path: "manageuser",
-        element: <ManagerUser></ManagerUser>,
+        path: "home",
+        element: (
+          <PrivateRoute>
+            <DashboardHome></DashboardHome>
+          </PrivateRoute>
+        ),
       },
       {
-        path: "addCourse",
-        element: <AddCourse></AddCourse>,
+        path: "manageUsers",
+        element: (
+          <AdminRoute>
+            <MangeUsers></MangeUsers>
+          </AdminRoute>
+        ),
       },
       {
         path: "manageAddedCourses",
-        element: <ManageAddedCourses></ManageAddedCourses>,
+        element: (
+          <AdminRoute>
+            <ManageAddedCourses></ManageAddedCourses>
+          </AdminRoute>
+        ),
       },
       {
-        path: "manageCourse",
-        element: <ManageCourse></ManageCourse>,
+        path: "manageCourses",
+        element: (
+          <InstructorRoute>
+            <ManageCourses></ManageCourses>
+          </InstructorRoute>
+        ),
       },
       {
-        path: "selectedCourse",
-        element: <SelectedCourse></SelectedCourse>,
+        path: "addedCourses",
+        element: (
+          <InstructorRoute>
+            <AddedCourses></AddedCourses>
+          </InstructorRoute>
+        ),
+      },
+      {
+        path: "selectedCourses",
+        element: (
+          <PrivateRoute>
+            <SelectedCourses></SelectedCourses>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "myEnrollClass",
+        element: (
+          <PrivateRoute>
+            <MyEnrollClasses></MyEnrollClasses>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "payment/:paymentId",
+        element: (
+          <PrivateRoute>
+            <Payment></Payment>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "paymentHistory",
+        element: (
+          <PrivateRoute>
+            <PaymentHistory></PaymentHistory>
+          </PrivateRoute>
+        ),
       },
     ],
   },
