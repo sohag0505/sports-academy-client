@@ -23,12 +23,12 @@ const Slider = () => {
 
   return (
     <div className="slider-container">
-      <div className="slider grid grid-cols-1 md:grid-cols-3 gap-20">
+      <div className="slider grid grid-cols-1 md:grid-cols-3 gap-5">
         {sportsData.map((sport) => (
           <div key={sport.id} className="card">
             <div>
-              <div className="card w-full md:w-96 bg-base-100 shadow-xl">
-                <figure className="px-10 pt-10">
+              <div className="card w-full bg-base-100 shadow-xl">
+                <figure className="p-1">
                   <img
                     src={sport.image}
                     alt="Shoes"

@@ -4,15 +4,17 @@ import { AuthContext } from "../providers/AuthProvider";
 
 const Courses = () => {
   const [sportsData, setSportsData] = useState([]);
-  const {user}=useContext(AuthContext)
-  const { role } = useRole()
-  const currentStatus = 'accepted';
+  const { user } = useContext(AuthContext);
+  const { role } = useRole();
+  const currentStatus = "accepted";
   useEffect(() => {
     // Simulating an API call to fetch sports data
     const fetchSportsData = async () => {
       try {
         // Make an API call to fetch sports data
-        const response = await fetch(`http://localhost:5000/classes?status=${currentStatus}`);
+        const response = await fetch(
+          `http://localhost:5000/classes?status=${currentStatus}`
+        );
         const data = await response.json();
 
         // Update the state with the fetched sports data
@@ -25,26 +27,25 @@ const Courses = () => {
     fetchSportsData();
   }, []);
   const handleSelect = (singleClass) => {
-    const { _id, ...rest } = singleClass
-    const newData = { studentEmail: user.email, ...rest }
+    const { _id, ...rest } = singleClass;
+    const newData = { studentEmail: user.email, ...rest };
     // console.log(newData)
 
-    fetch('http://localhost:5000/selectedClass', {
-      method: 'POST',
+    fetch("http://localhost:5000/selectedClass", {
+      method: "POST",
       headers: {
-        'content-type': 'application/json'
+        "content-type": "application/json",
       },
-      body: JSON.stringify(newData)
+      body: JSON.stringify(newData),
     })
-      .then(res => res.json())
+      .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          alert('Added')
+          alert("Added");
           // reset()
         }
-
-      })
-  }
+      });
+  };
 
   return (
     <div className="slider-container">
@@ -52,8 +53,8 @@ const Courses = () => {
         {sportsData.map((sport) => (
           <div key={sport.id} className="card">
             <div>
-              <div className="card w-full md:w-96 bg-base-100 shadow-xl">
-                <figure className="px-10 pt-10">
+              <div className="card w-full bg-base-100 shadow-xl">
+                <figure className=" ">
                   <img
                     src={sport.image}
                     alt="Shoes"
@@ -73,7 +74,11 @@ const Courses = () => {
                     </p>
                     <p>{sport.seats}</p>
                   </div>
-                  <button onClick={() => handleSelect(sport)} disabled={ role !== 'student'} className="btn btn-block btn-outline btn-error">
+                  <button
+                    onClick={() => handleSelect(sport)}
+                    disabled={role !== "student"}
+                    className="btn btn-block btn-outline btn-error"
+                  >
                     Select Course
                   </button>
                 </div>
