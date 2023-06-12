@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
-import PaymentHistoryCard from "./PaymentHistoryCard";
 import SectionTittle from "../../shared/SectionTittle";
+import PaymentHistoryCard from "./PaymentHistoryCard";
 
 const PaymentHistory = () => {
   const [details, setDetails] = useState([]);
@@ -9,7 +9,9 @@ const PaymentHistory = () => {
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/paymentHistory/${user?.email}`)
+    fetch(
+      `https://sports-academies-server-pink.vercel.app/paymentHistory/${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => setDetails(data));
   }, []);

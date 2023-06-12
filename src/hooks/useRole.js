@@ -6,7 +6,9 @@ const useRole = () => {
   const [loading, setLoading] = useState(true);
   const { user } = useContext(AuthContext);
   useEffect(() => {
-    fetch(`http://localhost:5000/userRole?email=${user?.email}`)
+    fetch(
+      `https://sports-academies-server-pink.vercel.app/userRole?email=${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setRole(data.role);

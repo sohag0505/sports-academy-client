@@ -8,7 +8,9 @@ const Instructors = () => {
     const fetchInstructors = async () => {
       try {
         // Replace this with your actual API call to fetch the instructor data
-        const response = await fetch("http://localhost:5000/instructors");
+        const response = await fetch(
+          "https://sports-academies-server-pink.vercel.app/instructors"
+        );
         const data = await response.json();
         setInstructors(data);
       } catch (error) {
@@ -18,10 +20,12 @@ const Instructors = () => {
 
     fetchInstructors();
   }, []);
-console.log(instructors)
+  console.log(instructors);
   return (
     <section>
-      <h2 className="text-2xl font-bold mb-4">Instructors</h2>
+      <h2 className="text-2xl font-bold text-center mb-10 mt-10">
+        Instructors
+      </h2>
       <div className="grid grid-cols-1  md:grid-cols-4 gap-4">
         {instructors.map((instructor) => (
           <div

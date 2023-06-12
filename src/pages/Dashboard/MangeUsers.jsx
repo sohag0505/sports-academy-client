@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import MangeUsersCard from "./MangeUsersCard";
 import SectionTittle from "../shared/SectionTittle";
+import MangeUsersCard from "./MangeUsersCard";
 
 const MangeUsers = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/users")
+    fetch("https://sports-academies-server-pink.vercel.app/users")
       .then((res) => res.json())
       .then((data) => setUsers(data));
   }, []);

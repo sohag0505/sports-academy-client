@@ -81,7 +81,7 @@ const CheckoutForm = ({ cart, price }) => {
         status: "service pending",
         curseDetails: cart,
       };
-      fetch("http://localhost:5000/payments", {
+      fetch("https://sports-academies-server-pink.vercel.app/payments", {
         method: "POST",
         headers: {
           "content-type": "application/json",

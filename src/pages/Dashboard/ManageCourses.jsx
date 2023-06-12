@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+import SectionTittle from "../shared/SectionTittle";
 import ManageCourseModal from "./ManageCourseModal";
 import ManageCoursesCard from "./ManageCoursesCard";
-import SectionTittle from "../shared/SectionTittle";
 // import { useQuery } from '@tanstack/react-query';
 
 const ManageCourses = () => {
@@ -11,14 +11,16 @@ const ManageCourses = () => {
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/classes?email=${user?.email}`)
+    fetch(
+      `https://sports-academies-server-pink.vercel.app/classes?email=${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => setClasses(data));
   }, []);
   // const {data: classes = [], isLoading: loading, refetch} = useQuery({
   //     queryKey: ['classes'],
   //     queryFn: async() => {
-  //         const res = await fetch(`http://localhost:5000/classes?email=${user?.email}`);
+  //         const res = await fetch(`https://sports-academies-server-pink.vercel.app/classes?email=${user?.email}`);
   //         return res.json();
   //     }
   // })
@@ -26,9 +28,12 @@ const ManageCourses = () => {
   //     return <p className='text-2xl'>Loading....</p>
   // }
   const handleDelete = (_id) => {
-    fetch(`http://localhost:5000/deleteCourse/${_id}`, {
-      method: "DELETE",
-    })
+    fetch(
+      `https://sports-academies-server-pink.vercel.app/deleteCourse/${_id}`,
+      {
+        method: "DELETE",
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.deletedCount > 0) {

@@ -13,7 +13,7 @@ const Courses = () => {
       try {
         // Make an API call to fetch sports data
         const response = await fetch(
-          `http://localhost:5000/classes?status=${currentStatus}`
+          `https://sports-academies-server-pink.vercel.app/classes?status=${currentStatus}`
         );
         const data = await response.json();
 
@@ -31,7 +31,7 @@ const Courses = () => {
     const newData = { studentEmail: user.email, ...rest };
     // console.log(newData)
 
-    fetch("http://localhost:5000/selectedClass", {
+    fetch("https://sports-academies-server-pink.vercel.app/selectedClass", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -49,6 +49,7 @@ const Courses = () => {
 
   return (
     <div className="slider-container">
+      <h2 className="text-2xl font-bold text-center mb-10 mt-10">Courses</h2>
       <div className="slider grid grid-cols-1 md:grid-cols-3 gap-10">
         {sportsData.map((sport) => (
           <div key={sport.id} className="card">

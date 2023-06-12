@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 
 const RegistrationPage = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const [error, setError] = useState("");
   const { createUser, updateUserProfile } = useContext(AuthContext);
   const handleSubmit = (e) => {
@@ -19,35 +19,35 @@ const RegistrationPage = () => {
       setError("password must be 6 characters or longer");
       return;
     }
-    createUser(email, password)
-    .then(result => {
+    createUser(email, password).then((result) => {
+      const loggedUser = result.user;
+      console.log(loggedUser);
 
-        const loggedUser = result.user;
-        console.log(loggedUser);
-
-        updateUserProfile(name, photoUrl)
-            .then(() => {
-                const saveUser = { name: name, email: email, role: 'student', img: photoUrl }
-                fetch('http://localhost:5000/users', {
-                    method: 'POST',
-                    headers: {
-                        'content-type': 'application/json'
-                    },
-                    body: JSON.stringify(saveUser)
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        if (data.insertedId) {
-                            alert('crated')
-                            navigate('/');
-                        }
-                    })
-
-
-
-            })
-            .catch(error => console.log(error))
-    })
+      updateUserProfile(name, photoUrl)
+        .then(() => {
+          const saveUser = {
+            name: name,
+            email: email,
+            role: "student",
+            img: photoUrl,
+          };
+          fetch("https://sports-academies-server-pink.vercel.app/users", {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(saveUser),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              if (data.insertedId) {
+                alert("crated");
+                navigate("/");
+              }
+            });
+        })
+        .catch((error) => console.log(error));
+    });
   };
   return (
     <div className="hero  bg-base-200">

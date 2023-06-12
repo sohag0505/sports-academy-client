@@ -24,7 +24,7 @@ const AddedCourses = () => {
       instructorEmail: user?.email,
       status: "pending",
     };
-    fetch("http://localhost:5000/addCourse", {
+    fetch("https://sports-academies-server-pink.vercel.app/addCourse", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -48,7 +48,7 @@ const LoginPage = () => {
           role: "student",
           img: loggedInUser?.photoURL,
         };
-        fetch("http://localhost:5000/users", {
+        fetch("https://sports-academies-server-pink.vercel.app/users", {
           method: "POST",
           headers: {
             "content-type": "application/json",

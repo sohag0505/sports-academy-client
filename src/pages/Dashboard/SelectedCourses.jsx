@@ -1,17 +1,19 @@
 import React, { useContext, useEffect, useState } from "react";
 
-
 import { AuthContext } from "../providers/AuthProvider";
-import SelectedCoursesCard from "./SelectedCoursesCard";
 import SectionTittle from "../shared/SectionTittle";
+import SelectedCoursesCard from "./SelectedCoursesCard";
 
 const SelectedCourses = () => {
   const [classes, setClasses] = useState([]);
   const { user } = useContext(AuthContext);
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/selectedClass/${id}`, {
-      method: "DELETE",
-    })
+    fetch(
+      `https://sports-academies-server-pink.vercel.app/selectedClass/${id}`,
+      {
+        method: "DELETE",
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.deletedCount > 0) {
@@ -22,7 +24,9 @@ const SelectedCourses = () => {
       });
   };
   useEffect(() => {
-    fetch(`http://localhost:5000/selectedClass/${user.email}`)
+    fetch(
+      `https://sports-academies-server-pink.vercel.app/selectedClass/${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => setClasses(data));
   }, []);

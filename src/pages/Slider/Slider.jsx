@@ -8,7 +8,9 @@ const Slider = () => {
     const fetchSportsData = async () => {
       try {
         // Make an API call to fetch sports data
-        const response = await fetch("http://localhost:5000/classes");
+        const response = await fetch(
+          "https://sports-academies-server-pink.vercel.app/classes"
+        );
         const data = await response.json();
 
         // Update the state with the fetched sports data

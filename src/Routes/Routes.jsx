@@ -11,6 +11,7 @@ import MyEnrollClasses from "../pages/Dashboard/MyEnrollClasses";
 import Payment from "../pages/Dashboard/Payment/Payment";
 import PaymentHistory from "../pages/Dashboard/Payment/PaymentHistory";
 import SelectedCourses from "../pages/Dashboard/SelectedCourses";
+import Error from "../pages/Error/Error";
 import Home from "../pages/Home/Home/Home";
 import Instructors from "../pages/Instructors/Instructors";
 import LoginPage from "../pages/LoginPage/LoginPage";
@@ -123,5 +124,9 @@ export const router = createBrowserRouter([
         ),
       },
     ],
+  },
+  {
+    path: "*",
+    element: <Error></Error>,
   },
 ]);
