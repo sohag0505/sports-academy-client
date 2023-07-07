@@ -1,7 +1,7 @@
 [
   {
     "name": "John Doe",
-    "image": "https://images.unsplash.com/photo-1603683180670-89e591ecf86a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9vdGJhbGwlMjBjb2FjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    "image": "https://as2.ftcdn.net/v2/jpg/01/99/36/81/1000_F_199368195_rKZcQ4DBCivtp2YTKG59Q33oscAU4Qqm.jpg",
     "email": "john@example.com",
     "students": ["student1", "student2", "student3"],
     "age": 32,
@@ -28,7 +28,7 @@
   },
   {
     "name": "Emily Wilson",
-    "image": "https://images.unsplash.com/photo-1599474924187-334a4ae5bd3c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1083&q=80",
+    "image": "https://img.freepik.com/free-photo/teacher-doing-english-lesson-online-his-students_23-2148963017.jpg?w=2000",
     "email": "emily@example.com",
     "students": ["student10", "student11", "student12"],
     "age": 30,
@@ -37,7 +37,7 @@
   },
   {
     "name": "Michael Johnson",
-    "image": "https://www.ziprecruiter.com/svc/fotomat/public-ziprecruiter/cms/676154516BasketballCoach.jpg",
+    "image": "https://img.freepik.com/premium-photo/confident-mature-male-teacher-giving-online-class-explaining-new-material-writing-english-rules_116547-20348.jpg?w=2000",
     "email": "michael@example.com",
     "students": ["student13", "student14", "student15"],
     "age": 33,
@@ -46,7 +46,7 @@
   },
   {
     "name": "Sarah Anderson",
-    "image": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/aetyxsba3ftysiqmz2oy.jpg",
+    "image": "https://media.istockphoto.com/id/931461978/photo/people-person-employment-document-agreement-contract-expert-success-professional-concept.jpg?s=612x612&w=0&k=20&c=1_rJeHM04wxsxfrILpBEozmmr44ENK_dD-yw5YobP7A=",
     "email": "sarah@example.com",
     "students": ["student16", "student17", "student18"],
     "age": 29,
@@ -55,7 +55,7 @@
   },
   {
     "name": "David Brown",
-    "image": "https://www.your-personal-swim-coach.nl/wp-content/uploads/2021/01/EVV_Zwembad_Overbosch_Den-Haag_Personal-Swim_21-jan_2018-92-1280-x-702.jpg",
+    "image": "https://img.freepik.com/premium-photo/cheerful-businessman-showing-graphics_171337-32133.jpg",
     "email": "david@example.com",
     "students": ["student19", "student20", "student21"],
     "age": 31,
@@ -73,7 +73,7 @@
   },
   {
     "name": "Daniel Lee",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/David_Leadbetter.jpg/1200px-David_Leadbetter.jpg",
+    "image": "https://img.freepik.com/free-photo/manager-office_1098-16249.jpg",
     "email": "daniel@example.com",
     "students": ["student25", "student26", "student27"],
     "age": 34,
@@ -82,7 +82,7 @@
   },
   {
     "name": "Sophia Hernandez",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/6/63/Greg_Rutherford_Our_Greatest_Team_Parade.jpg",
+    "image": "https://media.istockphoto.com/id/966215290/photo/portrait-of-pretty-charming-cute-clever-stylish-girl-in-striped-sweater-and-hairstyle-having.jpg?s=612x612&w=0&k=20&c=9Cp4TKnC_CSMpl9EQQxXoNkWfgpoZHA_-dyvCPnPGRA=",
     "email": "sophia@example.com",
     "students": ["student28", "student29", "student30"],
     "age": 32,

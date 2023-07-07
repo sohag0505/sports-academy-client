@@ -1,3 +1,5 @@
+import logo from "../../../assets/miu.png";
+
 const Footer = () => {
   return (
     <div>
@@ -25,13 +27,9 @@ const Footer = () => {
       </footer>
       <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
         <div className="items-center grid-flow-col">
-          <img
-            className="h-12 w-12"
-            src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/279619836/original/a6a22f36615452c07d9515efb04334048ef85394/design-a-professional-modern-sports-logo.jpg"
-            alt=""
-          />
+          <img className="h-12 w-22" src={logo} alt="" />
           <p>
-            Sports Acadamies <br />
+            MIU <br />
             copyright2023©All right reserved.
           </p>
         </div>

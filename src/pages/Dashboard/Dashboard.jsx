@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
+import logo from "../../../src/assets/miu.png";
 import useRole from "../../hooks/useRole";
 
 const Dashbaord = () => {
@@ -23,9 +24,9 @@ const Dashbaord = () => {
           {/* Sidebar content here */}
           <img
             className="object-cover"
-            src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/279619836/original/a6a22f36615452c07d9515efb04334048ef85394/design-a-professional-modern-sports-logo.jpg"
-            height={40}
-            width={60}
+            src={logo}
+            height={150}
+            width={250}
             alt=""
           />
           {/* admin */}

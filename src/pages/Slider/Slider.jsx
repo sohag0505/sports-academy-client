@@ -25,6 +25,9 @@ const Slider = () => {
 
   return (
     <div className="slider-container">
+      <h2 className="slider-title text-3xl text-center my-10 font-semibold">
+        Courses
+      </h2>
       <div className="slider grid grid-cols-1 md:grid-cols-3 gap-5">
         {sportsData.map((sport) => (
           <div key={sport.id} className="card">
