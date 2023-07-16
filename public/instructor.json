@@ -1,7 +1,7 @@
 [
   {
     "name": "John Doe",
-    "image": "https://as2.ftcdn.net/v2/jpg/01/99/36/81/1000_F_199368195_rKZcQ4DBCivtp2YTKG59Q33oscAU4Qqm.jpg",
+    "image": "https://images.unsplash.com/photo-1631490238088-9e9dd50041a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Zm9vdGJhbGwlMjBjb2FjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "email": "john@example.com",
     "students": ["student1", "student2", "student3"],
     "age": 32,
@@ -10,7 +10,7 @@
   },
   {
     "name": "Jane Smith",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Sri_Lanka_Cricket_Practice_Session_-_Coach_Marvan_Atapattu_giving_slip_catching_practice.jpg/800px-Sri_Lanka_Cricket_Practice_Session_-_Coach_Marvan_Atapattu_giving_slip_catching_practice.jpg",
+    "image": "https://images.unsplash.com/photo-1595210382266-2d0077c1f541?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNyaWNrZXQlMjBjb2FjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "email": "jane@example.com",
     "students": ["student4", "student5", "student6"],
     "age": 28,
@@ -19,7 +19,7 @@
   },
   {
     "name": "Robert Johnson",
-    "image": "https://images.unsplash.com/photo-1611725088431-2528430c585e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2hlc3MlMjBrb2NhaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    "image": "https://images.unsplash.com/photo-1547444795-ad4270fa2885?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2hlc3MlMjBwbGF5ZXJ8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
     "email": "robert@example.com",
     "students": ["student7", "student8", "student9"],
     "age": 35,
@@ -28,7 +28,7 @@
   },
   {
     "name": "Emily Wilson",
-    "image": "https://img.freepik.com/free-photo/teacher-doing-english-lesson-online-his-students_23-2148963017.jpg?w=2000",
+    "image": "https://ichef.bbci.co.uk/news/976/cpsprodpb/1500C/production/_123882068_hi074864471.jpg",
     "email": "emily@example.com",
     "students": ["student10", "student11", "student12"],
     "age": 30,
@@ -37,7 +37,7 @@
   },
   {
     "name": "Michael Johnson",
-    "image": "https://img.freepik.com/premium-photo/confident-mature-male-teacher-giving-online-class-explaining-new-material-writing-english-rules_116547-20348.jpg?w=2000",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1erIV-8gPTwq0DZiuRYKMOx3dqxgvY0JI9Q&usqp=CAU",
     "email": "michael@example.com",
     "students": ["student13", "student14", "student15"],
     "age": 33,

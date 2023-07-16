@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../../assets/miu.png";
+
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Navbar = () => {
@@ -42,8 +42,20 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <div className="normal-case text-xl">
-            <img src={logo} height={80} width={450} alt="" />
+          <div className="normal-case text-xl flex justify-center items-center">
+            <div>
+              <img
+                src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/279619836/original/a6a22f36615452c07d9515efb04334048ef85394/design-a-professional-modern-sports-logo.jpg"
+                height={40}
+                width={40}
+                alt=""
+              />
+            </div>
+            <div>
+              <h2 className="text-sm text-rose-400 font-semibold">
+                Sports Academy
+              </h2>
+            </div>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">

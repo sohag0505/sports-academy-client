@@ -17,14 +17,12 @@ const TopSlider = () => {
       <div className="relative">
         <img
           className="object-cover w-full h-[600px]"
-          src="https://scontent.fdac34-1.fna.fbcdn.net/v/t39.30808-6/305636900_601871211385177_8862301353325299851_n.jpg?_nc_cat=111&cb=99be929b-3346023f&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeFDn4U5EVjH1CdO09OMvqXUTWnjKTQ3OEtNaeMpNDc4S7vOC11dZuR1Kzr5LIA6wVw92788CFJLjwgwY0MadgVS&_nc_ohc=KjNFG09e6m8AX8lz9Bv&_nc_zt=23&_nc_ht=scontent.fdac34-1.fna&oh=00_AfAK93BnE0g0iJvS2aMeMU7hAWR_TALvh1Au8h4lVmOxaA&oe=64AD4147"
+          src="https://cdn.firstcry.com/education/2022/05/04111910/522565846.jpg"
           alt="Slide 1"
         />
         <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4">
           <div className="text-center">
-            <h2 className="text-lg font-bold">
-              Manarat International University
-            </h2>
+            <h2 className="text-lg font-bold">Football Playground</h2>
             <p className="text-sm">Ashulia,Savar</p>
           </div>
         </div>
@@ -32,14 +30,12 @@ const TopSlider = () => {
       <div className="relative">
         <img
           className="object-cover w-full h-[600px]"
-          src="https://lh3.googleusercontent.com/p/AF1QipNcFEKFTBXEaUgttD2zglw8NEGkOtQrt6BbUXyO=w768-h768-n-o-v1"
+          src="https://media.gettyimages.com/id/183256716/photo/ball-and-basketball-court.jpg?s=612x612&w=gi&k=20&c=j4n2xknaJ-tL-tGZyvUxXpjhBFEteP0nx9L7ZMk0oZI="
           alt="Slide 2"
         />
         <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4">
           <div className="text-center">
-            <h2 className="text-lg font-bold">
-              Manarat International University
-            </h2>
+            <h2 className="text-lg font-bold">Basketball Playground</h2>
             <p className="text-sm">Gulshan, Dhaka</p>
           </div>
         </div>
@@ -47,14 +43,12 @@ const TopSlider = () => {
       <div className="relative">
         <img
           className="object-cover w-full h-[600px]"
-          src="https://manarat.ac.bd/wp-content/uploads/2021/06/Website-header-cover-2.jpg"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcVtIHdlHn_v7sNjQScot5qEjhHZGGBdaQffJj-5OaqTO6CC609OOCc1NIrBJHPf40MoU&usqp=CAU"
         />
         <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4">
           <div className="text-center">
-            <h2 className="text-lg font-bold">
-              Manarat International University
-            </h2>
-            <p className="text-sm">Admission Fair</p>
+            <h2 className="text-lg font-bold">Cricket Playground</h2>
+            <p className="text-sm">Permanent Academy</p>
           </div>
         </div>
       </div>
